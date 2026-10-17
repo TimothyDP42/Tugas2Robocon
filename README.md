@@ -18,4 +18,4 @@ Ada juga berbagai alasan pemilihan angka-angka yang spesifik di program ini. Ala
 - Jalankan `ros2 run turtle_control saw_driver` untuk menggambar bentuk bilah
 
 # Video Penjelasan
-link : 
+link : https://drive.google.com/file/d/1yqU-VXPZr8yjtFKH-GFTQXXY7Q-EPVmw/view?usp=drivesdk
