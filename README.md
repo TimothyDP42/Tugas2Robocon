@@ -10,3 +10,12 @@ Variabel 't' dalam program menampung data setiap kali node dipanggilkan, hal ini
 
 Ada juga berbagai alasan pemilihan angka-angka yang spesifik di program ini. Alasan kecepatan masukan kecepatan linear **(msg.linear.x)** dan kecepatan anguler **(msg.angular.z)** memliki nilai **π** (pi), ialah agar durasi yang dihasilkan untuk satu rotasi penuh dalam pembuatan lingkaran adalah bilangan bulat. Selain itu, alasan kenapa durasi ini dipilih adalah sisi yang terbuat atau belokan yang terbuat akan semakin sedikit dengan kecepatan linear dan anguler yang lebih tinggi. 20 panggilan Cukup cepat sementara cukup mulus untuk menghasilkan sebuah lingkaran.
 
+# Cara Menjalankan
+- Pastikan dependency untuk ROS2 sudah ada bersama satu file ini
+- Siapkan 2 Terminal, satu untuk menjalankan TurtleSim dan satu untuk menajalankan saw_driver (ada juga pose listener untuk melihat posisi dan perubahan _turtle_ tetapi opsional)
+- Masukan _source_ file ROS2 dengan menjalankan `source /opt/ros/humble/setup.bash` dan `source ~/ros2_ws/install/setup.bash` pada masing-masing terminal
+- Inisialisasi node TurtleSim dengan menjalankan `ros2 run turtlesim turtlesim_node` pada salah satu terminal
+- Jalankan `ros2 run turtle_control saw_driver` untuk menggambar bentuk bilah
+
+# Video Penjelasan
+link : 
