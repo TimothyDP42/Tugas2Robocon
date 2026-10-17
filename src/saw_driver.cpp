@@ -10,15 +10,14 @@
 
 using namespace std::chrono_literals;
 
-class CircleDriver : public rclcpp::Node
+class SawDriver : public rclcpp::Node
 {
 public:
-  CircleDriver()
-  : Node("circle_driver")
+  SawDriver()
+  : Node("saw_driver")
   {
     publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
-    timer_ = this->create_wall_timer(
-      100ms, std::bind(&CircleDriver::timer_callback, this));
+    timer_ = this->create_wall_timer(100ms, std::bind(&SawDriver::timer_callback, this));
     teleport_client_ = this->create_client<turtlesim::srv::TeleportAbsolute>("/turtle1/teleport_absolute");
     pen_client_ = this->create_client<turtlesim::srv::SetPen>("/turtle1/set_pen");
       
@@ -166,7 +165,7 @@ private:
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<CircleDriver>());
+  rclcpp::spin(std::make_shared<SawDriver>());
   rclcpp::shutdown();
   return 0;
 }
